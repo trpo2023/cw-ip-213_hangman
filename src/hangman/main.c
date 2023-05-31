@@ -24,11 +24,15 @@ int main() {
     // Запрос у пользователя угадываемой буквы
     printf("Write letter: ");
     scanf(" %c", &temp);
+    int tempw = 0;
     // Проверяем, есть ли буква в слове
     for (i = 0; i < len; i++) {
       if (word[i] == temp) {
         guessed[i] = temp;
-        chance++;
+        tempw += 1;
+        if (tempw == 1) {
+          chance++;
+        }
       }
     }
     // Уменьшаем количество оставшихся попыток, если пользователь не угадал
