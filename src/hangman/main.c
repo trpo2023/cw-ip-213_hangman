@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <libhangman/word.h>
+
 int main() {
-  char word[100], guessed[100], temp;
-  int i, len, chance, done = 0;
+  const char *word;
+  char guessed[100], temp;
+  int i, len, chance, done = 0, category;
 
   // Получаем слово для угадывания от пользователя
-  printf("Write word: ");
-  scanf("%s", word);
+
+  // printf("Write word: ");
+  // scanf("%s", word);
+  printf("Select a category 1 -- fruits 2 -- animals 3 -- sport\n");
+  scanf("%d", &category);
+  word = Word(category);
   len = strlen(word);
 
   // Инициализируем массив guessed символами '_', соответствующими каждой букве
@@ -46,9 +53,9 @@ int main() {
   }
   // Выводим результат игры
   if (done) {
-    printf("You win! %s!\n", word);
+    printf("You win! Word is - %s!\n", word);
   } else {
-    printf("You lose %s. Try agan!\n", word);
+    printf("You lose word is - %s. Try agan!\n", word);
   }
 
   return 0;
