@@ -47,8 +47,6 @@ ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 8
 Cpp11BracedListStyle: true
 DerivePointerAlignment: false
-DisableFormat: true
-SortIncludes: false
 ExperimentalAutoDetectBinPacking: false
 FixNamespaceComments: false
 IncludeBlocks:   Preserve
@@ -87,3 +85,4 @@ UseTab:          Never
 DisableFormat: true
 SortIncludes: false
 ...
+
