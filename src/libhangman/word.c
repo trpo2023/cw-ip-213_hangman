@@ -3,12 +3,14 @@
 #include <time.h>
 
 // Функция для вывода случайного слова из выбранной категории
-const char *Word(int category) {
+const char *Word(int category)
+{
   int randomIndex;
   srand(time(NULL));
 
   // Проверка выбранной категории и вывод случайного слова
-  switch (category) {
+  switch (category)
+  {
   case 1:
     // Категория 1
     {
